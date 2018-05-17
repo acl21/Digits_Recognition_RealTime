@@ -3,6 +3,7 @@ from collections import deque
 import numpy as np
 import cv2
 
+# Load the models built in the previous steps
 mlp_model = load_model('mnist_mlp_model.h5')
 cnn_model = load_model('mnist_cnn_model.h5')
 
@@ -71,7 +72,6 @@ while True:
             blackboard_cnts = cv2.findContours(thresh1.copy(), cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)[1]
             if len(blackboard_cnts) >= 1:
                 cnt = sorted(blackboard_cnts, key = cv2.contourArea, reverse = True)[0]
-                #print(cv2.contourArea(cnt))
 
                 if cv2.contourArea(cnt) > 1000:
                     x, y, w, h = cv2.boundingRect(cnt)
@@ -102,8 +102,7 @@ while True:
 
     # Show the frame
     cv2.imshow("Digits Recognition Real Time", frame)
-    #cv2.imshow('Blackboard', blackboard)
-    #cv2.imshow('Digit', digit)
+
     # If the 'q' key is pressed, stop the loop
     if cv2.waitKey(1) & 0xFF == ord("q"):
         break
