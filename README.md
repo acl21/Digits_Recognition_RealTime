@@ -1,4 +1,4 @@
-# Digits Recognition in Real Time
+# Digits Recognition in Real Time [![](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/akshaychandra21/Digits_Recognition_RealTime/blob/master/LICENSE.txt)
 This python application recognizes digits from real time webcam data. The user is allowed to write the digits on the screen using an object-of-interest (a water bottle cap in this case).
 
 ## Code Requirements
@@ -27,7 +27,7 @@ However, I have observed that the CNN model was doing way better than the MLP wh
 **All Hail CNNs !!**
 
 ## Working Example
-<img src="https://github.com/akshaychandra111/Digits_Recognition_RealTime/blob/master/demo.gif">
+<img src="https://github.com/akshaychandra21/Digits_Recognition_RealTime/blob/master/demo.gif">
 
 ## Execution
 Order of Execution is as follows:
